@@ -37,6 +37,22 @@
             "lintFilePatterns": ["projects/ui/**/*.ts", "projects/ui/**/*.html"],
             "eslintConfig": "projects/ui/eslint.config.js"
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular-vite:start-storybook",
+          "options": {
+            "configDir": "projects/ui/.storybook",
+            "browserTarget": "ui:build",
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular-vite:build-storybook",
+          "options": {
+            "configDir": "projects/ui/.storybook",
+            "browserTarget": "ui:build",
+            "outputDir": "storybook-static"
+          }
         }
       }
     }
