@@ -7,3 +7,4 @@
 
 export * from './lib/theme/theme.service';
 export * from './lib/button/button';
+export * from './lib/icon/icon';
