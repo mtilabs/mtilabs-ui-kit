@@ -1,0 +1,11 @@
+/**
+ * Storybook-only: paints the preview canvas with the current theme's
+ * background/foreground so components that rely on an ambient surface
+ * (transparent backgrounds, muted text) render correctly instead of
+ * floating on Storybook's own default white canvas. Never shipped to
+ * consumers — this file isn't part of projects/ui/styles.
+ */
+body {
+  background-color: var(--mtilabs-color-background);
+  color: var(--mtilabs-color-foreground);
+}

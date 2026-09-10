@@ -6,3 +6,4 @@
  */
 
 export * from './lib/theme/theme.service';
+export * from './lib/button/button';

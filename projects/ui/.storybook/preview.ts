@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/angular-vite';
 import '../styles/index.css';
+import './preview.css';
 
 const THEME_ATTRIBUTE = 'data-theme';
 
