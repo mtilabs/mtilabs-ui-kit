@@ -1,0 +1,55 @@
+/**
+ * Semantic color tokens — the public theming API.
+ *
+ * Light theme is the default, defined on bare :root so it also acts as the
+ * fallback when no theme preference is known. colors.dark.css overrides
+ * these same custom properties for dark mode; components must only ever
+ * reference the --mtilabs-color-* names below, never the primitives.
+ */
+:root {
+  /* Surfaces */
+  --mtilabs-color-background: var(--mtilabs-gray-0);
+  --mtilabs-color-foreground: var(--mtilabs-gray-900);
+  --mtilabs-color-surface: var(--mtilabs-gray-0);
+  --mtilabs-color-surface-foreground: var(--mtilabs-gray-900);
+  --mtilabs-color-muted: var(--mtilabs-gray-100);
+  --mtilabs-color-muted-foreground: var(--mtilabs-gray-500);
+  --mtilabs-color-border: var(--mtilabs-gray-200);
+  --mtilabs-color-border-strong: var(--mtilabs-gray-300);
+
+  /* Brand */
+  --mtilabs-color-primary: var(--mtilabs-blue-600);
+  --mtilabs-color-primary-hover: var(--mtilabs-blue-700);
+  --mtilabs-color-primary-foreground: var(--mtilabs-gray-0);
+  --mtilabs-color-secondary: var(--mtilabs-gray-100);
+  --mtilabs-color-secondary-hover: var(--mtilabs-gray-200);
+  --mtilabs-color-secondary-foreground: var(--mtilabs-gray-900);
+  --mtilabs-color-accent: var(--mtilabs-violet-600);
+  --mtilabs-color-accent-hover: var(--mtilabs-violet-700);
+  --mtilabs-color-accent-foreground: var(--mtilabs-gray-0);
+
+  /* Feedback */
+  --mtilabs-color-success: var(--mtilabs-green-600);
+  --mtilabs-color-success-bg: var(--mtilabs-green-50);
+  --mtilabs-color-success-foreground: var(--mtilabs-green-900);
+  --mtilabs-color-warning: var(--mtilabs-amber-600);
+  --mtilabs-color-warning-bg: var(--mtilabs-amber-50);
+  --mtilabs-color-warning-foreground: var(--mtilabs-amber-900);
+  --mtilabs-color-error: var(--mtilabs-red-600);
+  --mtilabs-color-error-bg: var(--mtilabs-red-50);
+  --mtilabs-color-error-foreground: var(--mtilabs-red-900);
+  --mtilabs-color-info: var(--mtilabs-blue-600);
+  --mtilabs-color-info-bg: var(--mtilabs-blue-50);
+  --mtilabs-color-info-foreground: var(--mtilabs-blue-900);
+
+  /* Destructive (mapped onto the error scale) */
+  --mtilabs-color-destructive: var(--mtilabs-red-600);
+  --mtilabs-color-destructive-hover: var(--mtilabs-red-700);
+  --mtilabs-color-destructive-foreground: var(--mtilabs-gray-0);
+
+  /* Interaction */
+  --mtilabs-color-focus-ring: var(--mtilabs-blue-500);
+  --mtilabs-color-disabled: var(--mtilabs-gray-200);
+  --mtilabs-color-disabled-foreground: var(--mtilabs-gray-400);
+  --mtilabs-color-overlay: rgb(15 23 42 / 50%);
+}

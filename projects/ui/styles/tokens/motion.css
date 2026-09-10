@@ -1,0 +1,21 @@
+:root {
+  --mtilabs-duration-fast: 100ms;
+  --mtilabs-duration-base: 150ms;
+  --mtilabs-duration-slow: 250ms;
+
+  --mtilabs-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --mtilabs-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --mtilabs-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+  --mtilabs-transition-base: var(--mtilabs-duration-base) var(--mtilabs-easing-standard);
+}
+
+/* Consumers/components should gate animations behind this token rather than
+   hardcoding durations, so a single media query can neutralize all motion. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --mtilabs-duration-fast: 0ms;
+    --mtilabs-duration-base: 0ms;
+    --mtilabs-duration-slow: 0ms;
+  }
+}

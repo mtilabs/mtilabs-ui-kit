@@ -1,0 +1,25 @@
+/**
+ * @mtilabs/ui design tokens + base styles.
+ *
+ * Import this once, globally, in a consuming application:
+ *
+ *   @import '@mtilabs/ui/styles/index.css';
+ *
+ * or add it to angular.json's "styles" array. It defines every
+ * --mtilabs-* custom property (the stable public theming API) plus a
+ * handful of opt-in utility classes used by the library's own components.
+ * Override any --mtilabs-* variable on :root (or a narrower selector) in
+ * your own stylesheet to customize the theme — no component internals need
+ * to be touched.
+ */
+@import './tokens/primitives.css';
+@import './tokens/colors.css';
+@import './tokens/colors.dark.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/radius.css';
+@import './tokens/shadow.css';
+@import './tokens/shadow.dark.css';
+@import './tokens/z-index.css';
+@import './tokens/motion.css';
+@import './base.css';

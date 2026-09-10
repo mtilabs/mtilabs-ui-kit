@@ -1,0 +1,54 @@
+/**
+ * Primitive color palette.
+ *
+ * Internal building blocks only — never reference these directly from
+ * components or from consuming applications. Consume the semantic tokens in
+ * colors.css / colors.dark.css instead (--mtilabs-color-*). Primitives are
+ * free to be renumbered or restructured between minor releases as long as
+ * the semantic layer keeps resolving to the same visual result.
+ */
+:root {
+  --mtilabs-gray-0: #ffffff;
+  --mtilabs-gray-50: #f8fafc;
+  --mtilabs-gray-100: #f1f5f9;
+  --mtilabs-gray-200: #e2e8f0;
+  --mtilabs-gray-300: #cbd5e1;
+  --mtilabs-gray-400: #94a3b8;
+  --mtilabs-gray-500: #64748b;
+  --mtilabs-gray-600: #475569;
+  --mtilabs-gray-700: #334155;
+  --mtilabs-gray-800: #1e293b;
+  --mtilabs-gray-900: #0f172a;
+  --mtilabs-gray-950: #020617;
+
+  --mtilabs-blue-50: #eff6ff;
+  --mtilabs-blue-100: #dbeafe;
+  --mtilabs-blue-300: #93c5fd;
+  --mtilabs-blue-500: #3b82f6;
+  --mtilabs-blue-600: #2563eb;
+  --mtilabs-blue-700: #1d4ed8;
+  --mtilabs-blue-900: #1e3a8a;
+
+  --mtilabs-violet-50: #f5f3ff;
+  --mtilabs-violet-500: #7c3aed;
+  --mtilabs-violet-600: #6d28d9;
+  --mtilabs-violet-700: #5b21b6;
+
+  --mtilabs-green-50: #f0fdf4;
+  --mtilabs-green-500: #22c55e;
+  --mtilabs-green-600: #16a34a;
+  --mtilabs-green-700: #15803d;
+  --mtilabs-green-900: #14532d;
+
+  --mtilabs-amber-50: #fffbeb;
+  --mtilabs-amber-500: #f59e0b;
+  --mtilabs-amber-600: #d97706;
+  --mtilabs-amber-700: #b45309;
+  --mtilabs-amber-900: #78350f;
+
+  --mtilabs-red-50: #fef2f2;
+  --mtilabs-red-500: #ef4444;
+  --mtilabs-red-600: #dc2626;
+  --mtilabs-red-700: #b91c1c;
+  --mtilabs-red-900: #7f1d1d;
+}

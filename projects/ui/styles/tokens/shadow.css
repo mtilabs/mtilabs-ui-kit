@@ -1,0 +1,6 @@
+:root {
+  --mtilabs-shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 6%);
+  --mtilabs-shadow-md: 0 2px 8px 0 rgb(15 23 42 / 8%), 0 1px 2px 0 rgb(15 23 42 / 6%);
+  --mtilabs-shadow-lg: 0 8px 24px 0 rgb(15 23 42 / 12%), 0 2px 4px 0 rgb(15 23 42 / 6%);
+  --mtilabs-shadow-xl: 0 16px 40px 0 rgb(15 23 42 / 16%);
+}

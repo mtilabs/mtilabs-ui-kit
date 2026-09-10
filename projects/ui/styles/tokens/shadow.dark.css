@@ -1,0 +1,16 @@
+/* Dark surfaces need darker, higher-opacity shadows to stay visible. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --mtilabs-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 30%);
+    --mtilabs-shadow-md: 0 2px 8px 0 rgb(0 0 0 / 36%), 0 1px 2px 0 rgb(0 0 0 / 30%);
+    --mtilabs-shadow-lg: 0 8px 24px 0 rgb(0 0 0 / 44%), 0 2px 4px 0 rgb(0 0 0 / 30%);
+    --mtilabs-shadow-xl: 0 16px 40px 0 rgb(0 0 0 / 52%);
+  }
+}
+
+:root[data-theme='dark'] {
+  --mtilabs-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 30%);
+  --mtilabs-shadow-md: 0 2px 8px 0 rgb(0 0 0 / 36%), 0 1px 2px 0 rgb(0 0 0 / 30%);
+  --mtilabs-shadow-lg: 0 8px 24px 0 rgb(0 0 0 / 44%), 0 2px 4px 0 rgb(0 0 0 / 30%);
+  --mtilabs-shadow-xl: 0 16px 40px 0 rgb(0 0 0 / 52%);
+}

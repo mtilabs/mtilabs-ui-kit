@@ -1,0 +1,96 @@
+/**
+ * Dark theme overrides.
+ *
+ * Applies automatically when the OS/browser prefers dark and the consumer
+ * hasn't forced a theme (no [data-theme] set, or [data-theme="dark"]), and
+ * explicitly whenever [data-theme="dark"] is set on <html> — see
+ * MtThemeService for the runtime API that toggles that attribute.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --mtilabs-color-background: var(--mtilabs-gray-950);
+    --mtilabs-color-foreground: var(--mtilabs-gray-100);
+    --mtilabs-color-surface: var(--mtilabs-gray-900);
+    --mtilabs-color-surface-foreground: var(--mtilabs-gray-100);
+    --mtilabs-color-muted: var(--mtilabs-gray-800);
+    --mtilabs-color-muted-foreground: var(--mtilabs-gray-400);
+    --mtilabs-color-border: var(--mtilabs-gray-700);
+    --mtilabs-color-border-strong: var(--mtilabs-gray-600);
+
+    --mtilabs-color-primary: var(--mtilabs-blue-500);
+    --mtilabs-color-primary-hover: var(--mtilabs-blue-300);
+    --mtilabs-color-primary-foreground: var(--mtilabs-gray-950);
+    --mtilabs-color-secondary: var(--mtilabs-gray-800);
+    --mtilabs-color-secondary-hover: var(--mtilabs-gray-700);
+    --mtilabs-color-secondary-foreground: var(--mtilabs-gray-100);
+    --mtilabs-color-accent: var(--mtilabs-violet-500);
+    --mtilabs-color-accent-hover: var(--mtilabs-violet-600);
+    --mtilabs-color-accent-foreground: var(--mtilabs-gray-950);
+
+    --mtilabs-color-success: var(--mtilabs-green-500);
+    --mtilabs-color-success-bg: color-mix(in srgb, var(--mtilabs-green-900) 60%, transparent);
+    --mtilabs-color-success-foreground: var(--mtilabs-green-50);
+    --mtilabs-color-warning: var(--mtilabs-amber-500);
+    --mtilabs-color-warning-bg: color-mix(in srgb, var(--mtilabs-amber-900) 60%, transparent);
+    --mtilabs-color-warning-foreground: var(--mtilabs-amber-50);
+    --mtilabs-color-error: var(--mtilabs-red-500);
+    --mtilabs-color-error-bg: color-mix(in srgb, var(--mtilabs-red-900) 60%, transparent);
+    --mtilabs-color-error-foreground: var(--mtilabs-red-50);
+    --mtilabs-color-info: var(--mtilabs-blue-500);
+    --mtilabs-color-info-bg: color-mix(in srgb, var(--mtilabs-blue-900) 60%, transparent);
+    --mtilabs-color-info-foreground: var(--mtilabs-blue-50);
+
+    --mtilabs-color-destructive: var(--mtilabs-red-500);
+    --mtilabs-color-destructive-hover: var(--mtilabs-red-600);
+    --mtilabs-color-destructive-foreground: var(--mtilabs-gray-950);
+
+    --mtilabs-color-focus-ring: var(--mtilabs-blue-300);
+    --mtilabs-color-disabled: var(--mtilabs-gray-800);
+    --mtilabs-color-disabled-foreground: var(--mtilabs-gray-600);
+    --mtilabs-color-overlay: rgb(2 6 23 / 65%);
+  }
+}
+
+/* Explicit override — wins regardless of OS preference. */
+:root[data-theme='dark'] {
+  --mtilabs-color-background: var(--mtilabs-gray-950);
+  --mtilabs-color-foreground: var(--mtilabs-gray-100);
+  --mtilabs-color-surface: var(--mtilabs-gray-900);
+  --mtilabs-color-surface-foreground: var(--mtilabs-gray-100);
+  --mtilabs-color-muted: var(--mtilabs-gray-800);
+  --mtilabs-color-muted-foreground: var(--mtilabs-gray-400);
+  --mtilabs-color-border: var(--mtilabs-gray-700);
+  --mtilabs-color-border-strong: var(--mtilabs-gray-600);
+
+  --mtilabs-color-primary: var(--mtilabs-blue-500);
+  --mtilabs-color-primary-hover: var(--mtilabs-blue-300);
+  --mtilabs-color-primary-foreground: var(--mtilabs-gray-950);
+  --mtilabs-color-secondary: var(--mtilabs-gray-800);
+  --mtilabs-color-secondary-hover: var(--mtilabs-gray-700);
+  --mtilabs-color-secondary-foreground: var(--mtilabs-gray-100);
+  --mtilabs-color-accent: var(--mtilabs-violet-500);
+  --mtilabs-color-accent-hover: var(--mtilabs-violet-600);
+  --mtilabs-color-accent-foreground: var(--mtilabs-gray-950);
+
+  --mtilabs-color-success: var(--mtilabs-green-500);
+  --mtilabs-color-success-bg: color-mix(in srgb, var(--mtilabs-green-900) 60%, transparent);
+  --mtilabs-color-success-foreground: var(--mtilabs-green-50);
+  --mtilabs-color-warning: var(--mtilabs-amber-500);
+  --mtilabs-color-warning-bg: color-mix(in srgb, var(--mtilabs-amber-900) 60%, transparent);
+  --mtilabs-color-warning-foreground: var(--mtilabs-amber-50);
+  --mtilabs-color-error: var(--mtilabs-red-500);
+  --mtilabs-color-error-bg: color-mix(in srgb, var(--mtilabs-red-900) 60%, transparent);
+  --mtilabs-color-error-foreground: var(--mtilabs-red-50);
+  --mtilabs-color-info: var(--mtilabs-blue-500);
+  --mtilabs-color-info-bg: color-mix(in srgb, var(--mtilabs-blue-900) 60%, transparent);
+  --mtilabs-color-info-foreground: var(--mtilabs-blue-50);
+
+  --mtilabs-color-destructive: var(--mtilabs-red-500);
+  --mtilabs-color-destructive-hover: var(--mtilabs-red-600);
+  --mtilabs-color-destructive-foreground: var(--mtilabs-gray-950);
+
+  --mtilabs-color-focus-ring: var(--mtilabs-blue-300);
+  --mtilabs-color-disabled: var(--mtilabs-gray-800);
+  --mtilabs-color-disabled-foreground: var(--mtilabs-gray-600);
+  --mtilabs-color-overlay: rgb(2 6 23 / 65%);
+}
