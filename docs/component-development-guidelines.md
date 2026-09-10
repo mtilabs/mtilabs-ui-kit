@@ -81,6 +81,7 @@ Don't reach for CDK for: a Button, Badge, Avatar, Card, Divider, or anything els
 ## Testing
 
 - Unit tests use Angular's own Vitest-based test builder (`ng test ui`, `TestBed`) — see `projects/ui/src/lib/theme/theme.service.spec.ts` for the service-testing pattern and `projects/ui/src/stories/smoke/smoke.component.spec.ts` for the component + a11y-helper pattern.
+- This workspace has no zone.js — it's zoneless. A test host component that binds inputs from **plain mutable fields** (`host.foo = 'x'; fixture.detectChanges();`) will not reliably re-render: nothing tells the zoneless change-detection scheduler that anything changed. Bind test host inputs from `signal()`s instead and update them with `.set()` — see `projects/ui/src/lib/button/button.spec.ts` for the pattern.
 - Story-level interaction/accessibility tests run separately via `npm run test:storybook` (Storybook's Vitest addon + Playwright) — these exercise the actual rendered story, including the a11y addon's axe-core checks.
 - For `ControlValueAccessor` components, test `writeValue`, `registerOnChange`/`registerOnTouched`, and the disabled state explicitly — don't just test that the component renders.
 
