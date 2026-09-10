@@ -42,6 +42,10 @@ __screenshots__/
 # Storybook
 /storybook-static
 
+# Mirrored by scripts/copy-license.mjs before each build; LICENSE at the repo
+# root is canonical.
+/projects/ui/LICENSE
+
 # System files
 .DS_Store
 Thumbs.db

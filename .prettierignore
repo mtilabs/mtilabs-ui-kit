@@ -1,0 +1,9 @@
+node_modules
+dist
+storybook-static
+coverage
+out-tsc
+.angular
+package-lock.json
+CHANGELOG.md
+projects/ui/CHANGELOG.md

@@ -3,18 +3,28 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build ui",
-    "watch": "ng build ui --watch --configuration development",
+    "build": "node scripts/copy-license.mjs && ng build ui",
+    "watch": "node scripts/copy-license.mjs && ng build ui --watch --configuration development",
     "test": "ng test ui",
     "lint": "ng lint ui",
-    "format": "prettier --write \"projects/**/*.{ts,html,css,json}\" \"*.md\"",
-    "format:check": "prettier --check \"projects/**/*.{ts,html,css,json}\" \"*.md\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "storybook": "ng run ui:storybook",
     "storybook:build": "ng run ui:build-storybook",
-    "test:storybook": "vitest run --project=storybook --root projects/ui"
+    "test:storybook": "vitest run --project=storybook --root projects/ui",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
   },
   "private": true,
   "packageManager": "npm@12.0.2",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "projects/*"
+  ],
   "dependencies": {
     "@angular/common": "^22.0.0",
     "@angular/compiler": "^22.0.0",
@@ -34,6 +44,8 @@
     "@angular/build": "^22.1.7",
     "@angular/cli": "^22.0.7",
     "@angular/compiler-cli": "^22.0.0",
+    "@changesets/changelog-github": "^0.5.1",
+    "@changesets/cli": "^3.0.2",
     "@chromatic-com/storybook": "^5.3.1",
     "@eslint/js": "^10.0.1",
     "@storybook/addon-a11y": "^10.6.0",
