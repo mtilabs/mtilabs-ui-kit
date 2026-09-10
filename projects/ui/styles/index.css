@@ -22,4 +22,5 @@
 @import './tokens/shadow.dark.css';
 @import './tokens/z-index.css';
 @import './tokens/motion.css';
+@import './tokens/icon.css';
 @import './base.css';
