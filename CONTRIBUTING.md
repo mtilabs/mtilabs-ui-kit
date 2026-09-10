@@ -57,7 +57,12 @@ Releasing is automated via `.github/workflows/release.yml` and doesn't need to b
 1. Merging a PR with one or more `.changeset/*.md` files into `main` triggers the release workflow, which opens (or updates) a "Version Packages" PR that applies the version bump(s) and updates `projects/ui/CHANGELOG.md`.
 2. Merging that PR triggers the workflow again; this time, with no pending changesets, it publishes `@mtilabs/ui` to npm and creates the matching git tag / GitHub Release.
 
-This requires an `NPM_TOKEN` repository secret (an npm automation token with publish access to the `@mtilabs` org) to be configured before the publish step will succeed — see the repo's GitHub Actions secrets settings. Until that's configured, the workflow will still open Version PRs correctly; only the final `npm publish` step will fail.
+This requires two one-time pieces of repo/org configuration before it works end to end:
+
+1. An **`NPM_TOKEN`** repository secret (an npm automation token with publish access to the `@mtilabs` org) — without it, only the final `npm publish` step fails.
+2. **"Allow GitHub Actions to create and approve pull requests"** enabled for this repo — without it, the workflow fails when it tries to open the Version Packages PR, with `GitHub Actions is not permitted to create or approve pull requests`. This is a two-layer setting: it must be allowed at the **organization** level (Organization Settings → Actions → General) before it can also be enabled at the repo level (Settings → Actions → General) — an org-level "disabled" overrides any repo-level attempt to turn it on, and only an org owner/admin can change the org-level setting.
+
+Until both are configured, `git push`ing the Version branch itself will still succeed; only the PR-creation and npm-publish steps will fail.
 
 Nothing publishes to npm from a feature branch or any workflow other than `release.yml`.
 
