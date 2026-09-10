@@ -10,7 +10,7 @@
 - Accessible by default (targeting WCAG 2.2 AA)
 - Themeable via CSS custom properties, with built-in light/dark themes and runtime switching
 - Tree-shakeable, SSR/hydration-friendly, no required dependency on Tailwind for consumers
-- Documented and developed through [Storybook](https://storybook.js.org/) (coming soon)
+- Documented and developed through [Storybook](https://storybook.js.org/), with automated accessibility checks (axe-core) on every story
 
 ## Theming
 
@@ -33,13 +33,18 @@ projects/ui/     the @mtilabs/ui library (public API in projects/ui/src/public-a
 Requirements: Node.js (see `.nvmrc`/`engines` once added) and npm.
 
 ```bash
-npm install       # install dependencies
-npm run build     # build the @mtilabs/ui library (ng-packagr) into dist/ui
-npm run test      # run unit tests (Vitest)
-npm run lint      # lint the library (ESLint + angular-eslint)
-npm run format    # format the repo with Prettier
+npm install             # install dependencies
+npm run build           # build the @mtilabs/ui library (ng-packagr) into dist/ui
+npm run test            # run unit + accessibility tests (Vitest)
+npm run lint            # lint the library (ESLint + angular-eslint)
+npm run format          # format the repo with Prettier
 npm run format:check
+npm run storybook       # start Storybook at http://localhost:6006
+npm run storybook:build # build the static Storybook site
+npm run test:storybook  # run story-level interaction/a11y tests (Vitest + Playwright)
 ```
+
+Every component should have a Storybook story covering its variants, sizes, and states in both themes — use the theme toggle in the Storybook toolbar to check light/dark. The Accessibility panel in Storybook runs the same axe-core checks as `npm run test:storybook`.
 
 ## Installation (once published)
 
