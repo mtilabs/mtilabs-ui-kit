@@ -1,0 +1,17 @@
+:root {
+  --mtilabs-spacing-0: 0;
+  --mtilabs-spacing-2xs: 0.125rem;
+  --mtilabs-spacing-xs: 0.25rem;
+  --mtilabs-spacing-sm: 0.5rem;
+  --mtilabs-spacing-md: 0.75rem;
+  --mtilabs-spacing-lg: 1rem;
+  --mtilabs-spacing-xl: 1.5rem;
+  --mtilabs-spacing-2xl: 2rem;
+  --mtilabs-spacing-3xl: 3rem;
+  --mtilabs-spacing-4xl: 4rem;
+
+  /* Component heights — shared by controls that need to align (Button, Input, Select, ...). */
+  --mtilabs-height-sm: 2rem;
+  --mtilabs-height-md: 2.5rem;
+  --mtilabs-height-lg: 3rem;
+}

@@ -12,6 +12,16 @@
 - Tree-shakeable, SSR/hydration-friendly, no required dependency on Tailwind for consumers
 - Documented and developed through [Storybook](https://storybook.js.org/) (coming soon)
 
+## Theming
+
+Design tokens (colors, spacing, radii, shadows, typography, z-index, motion) are published as CSS custom properties. Import the stylesheet once, globally:
+
+```css
+@import '@mtilabs/ui/styles/index.css';
+```
+
+This defaults to your OS/browser's light or dark preference. To force a theme or let users toggle at runtime, inject `MtThemeService` and call `setTheme('light' | 'dark' | 'system')` — it sets `[data-theme]` on `<html>`, which the token stylesheet keys off of. Override any `--mtilabs-*` custom property on `:root` in your own CSS to customize the theme; no component internals need to change.
+
 ## Repository layout
 
 ```text

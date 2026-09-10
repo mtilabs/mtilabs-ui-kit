@@ -1,0 +1,15 @@
+/**
+ * Layer order for stacked/overlay UI. Keep components' z-index values
+ * referencing these tokens instead of ad hoc numbers so overlay ordering
+ * (tooltip above popover above dropdown, etc.) stays predictable as new
+ * overlay-based components are added.
+ */
+:root {
+  --mtilabs-z-index-dropdown: 1000;
+  --mtilabs-z-index-sticky: 1100;
+  --mtilabs-z-index-overlay: 1200;
+  --mtilabs-z-index-modal: 1300;
+  --mtilabs-z-index-popover: 1400;
+  --mtilabs-z-index-tooltip: 1500;
+  --mtilabs-z-index-toast: 1600;
+}

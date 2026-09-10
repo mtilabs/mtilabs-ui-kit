@@ -5,4 +5,4 @@
  * versioning. Do not export internal implementation details here.
  */
 
-export {};
+export * from './lib/theme/theme.service';

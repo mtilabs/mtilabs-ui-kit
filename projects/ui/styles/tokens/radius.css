@@ -1,0 +1,8 @@
+:root {
+  --mtilabs-radius-none: 0;
+  --mtilabs-radius-sm: 0.25rem;
+  --mtilabs-radius-md: 0.5rem;
+  --mtilabs-radius-lg: 0.75rem;
+  --mtilabs-radius-xl: 1rem;
+  --mtilabs-radius-full: 9999px;
+}

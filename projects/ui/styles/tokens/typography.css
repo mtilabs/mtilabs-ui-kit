@@ -1,0 +1,29 @@
+:root {
+  --mtilabs-font-family-sans:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
+  --mtilabs-font-family-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+  --mtilabs-font-size-xs: 0.75rem;
+  --mtilabs-font-size-sm: 0.875rem;
+  --mtilabs-font-size-md: 1rem;
+  --mtilabs-font-size-lg: 1.125rem;
+  --mtilabs-font-size-xl: 1.25rem;
+  --mtilabs-font-size-2xl: 1.5rem;
+  --mtilabs-font-size-3xl: 1.875rem;
+  --mtilabs-font-size-4xl: 2.25rem;
+
+  --mtilabs-font-weight-regular: 400;
+  --mtilabs-font-weight-medium: 500;
+  --mtilabs-font-weight-semibold: 600;
+  --mtilabs-font-weight-bold: 700;
+
+  --mtilabs-line-height-tight: 1.25;
+  --mtilabs-line-height-normal: 1.5;
+  --mtilabs-line-height-relaxed: 1.75;
+
+  --mtilabs-letter-spacing-tight: -0.01em;
+  --mtilabs-letter-spacing-normal: 0;
+  --mtilabs-letter-spacing-wide: 0.01em;
+}
